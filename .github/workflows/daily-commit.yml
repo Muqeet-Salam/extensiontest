@@ -1,0 +1,23 @@
+name: Daily Commit with 24f1000531@ds.study.iitm.ac.in
+
+on:
+  schedule:
+    # Runs at 12:00 UTC daily (specific time, no wildcards)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  make-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo with 24f1000531@ds.study.iitm.ac.in
+        uses: actions/checkout@v4
+        
+      - name: Create commit with 24f1000531@ds.study.iitm.ac.in
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "24f1000531@ds.study.iitm.ac.in"
+          date > timestamp.txt
+          git add timestamp.txt
+          git commit -m "Daily automated commit [24f1000531@ds.study.iitm.ac.in] $(date)"
+          git push
