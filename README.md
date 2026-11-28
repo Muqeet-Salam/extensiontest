@@ -15,3 +15,8 @@ Day 2
 - various strings and array operations using pointers in c
 - implementation of strlen, strcpy, strcmp, strcat
 - leetcode 217 242 344
+
+Day 3 
+
+- pointer 3, more pointers, 2d arrays, memcpy and stuff
+- leetcode 283 26 53 128
